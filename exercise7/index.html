@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 7 - Eventos</title>
+
+  <script type="text/javascript">
+    function onInputChange(event) {
+      console.log(event);
+      console.log(event.target.value);
+    }
+  </script>
+</head>
+<body>
+  <input type="text" name="myText" onchange="onInputChange(event)">
+  <button onclick="console.log('Click!')">Botón</button>
+</body>
+</html>

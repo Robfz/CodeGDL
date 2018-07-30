@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 8 - Final</title>
+</head>
+<body>
+  <div>
+    <textarea id="myTextarea" rows="5"></textarea>
+  </div>
+  <div>
+    <button id="myButton">Log</button>
+  </div>
+  <script type="text/javascript">
+    let textareaText = '';
+
+    function onTextAreaChange(event) {
+      textareaText = event.target.value;
+    }
+
+    function onButtonClick() {
+      console.log(textareaText);
+    }
+
+    let textarea = document.getElementById('myTextarea');
+    let button = document.getElementById('myButton');
+
+    textarea.onchange = onTextAreaChange;
+    button.onclick = onButtonClick;
+  </script>
+</body>
+</html>
