@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ejercicio 8 - Final</title>
-
-  <script type="text/javascript">
-    let textareaText = '';
-
-    function onTextAreaChange(event) {
-      textareaText = event.target.value;
-    }
-
-    function onButtonClick() {
-      console.log(textareaText);
-    }
-  </script>
+  <title>Ejercicio 8 - Eventos</title>
 </head>
 <body>
-  <div>
-    <textarea rows="5" onchange="onTextAreaChange(event)"></textarea>
-  </div>
-  <div>
-    <button onclick="onButtonClick()">Log</button>  
-  </div>
+  <input type="text" name="myText" id="myInput">
+  <script type="text/javascript">
+    function onInputChange(event) {
+      document.getElementById('myInput').value = event.target.value.toUpperCase();
+    }
+
+    document.getElementById('myInput').onchange = onInputChange;
+  </script>
 </body>
 </html>
