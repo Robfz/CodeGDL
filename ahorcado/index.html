@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ahorcado</title>
+  <style type="text/css">
+  div {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <h1>AHORCADO</h1>
+  </div>
+  <div>
+    <button onclick="reiniciar()">Reiniciar</button>
+  </div>
+  <br/>
+  <div id="divCrearPalabra">
+    <input type="password" id="palabra" onkeyup="checarCambio()"/>
+    <br/><br/>
+    <button id="botonCrear" onclick="crearPalabraQueAdivinar()" disabled>Crear palabra</button>
+  </div>
+  <div id="divAdivinacion" style="display: none">
+    <div>
+      Intentos: <span id="intentos"></span>
+      <br/><br/>
+      <span id="letrasAdivinadas"></span>
+    </div>
+    <br/>
+    <div>
+      Escribe una letra:
+      <input type"text" id="letra" maxlength="1" size="2" style="text-align: center"/>
+      <br/><br/>
+      <button onclick="checarLetra()">Buscar letra</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="ahorcado2.js"></script>
+</body>
+</html>
